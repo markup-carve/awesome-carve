@@ -45,11 +45,15 @@ Language-specific implementations for parsing and rendering Carve.
 
 - [markup-carve/carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation of the Carve markup language.
 
+### PHP
+
+- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - PHP parser and renderer with a `carve` CLI binary; forked from djot-php, syntax migration in progress.
+
 ### Rust
 
 - [markup-carve/carve-rs](https://github.com/markup-carve/carve-rs) - Rust parser and HTML renderer with a `carve` CLI binary; passes the upstream spec corpus.
 
-<!-- Add additional language sections (PHP, Go, Python, Ruby, …) as implementations land -->
+<!-- Add additional language sections (Go, Python, Ruby, …) as implementations land -->
 
 ## Editors & IDE Support
 
