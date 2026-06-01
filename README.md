@@ -31,6 +31,7 @@ Documentation and reference materials for Carve.
 - [markup-carve/carve](https://github.com/markup-carve/carve) - Language definition, philosophy, and quick reference.
 - [markup-carve/carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation.
 - [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Native Tree-sitter grammar for Carve.
+- [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for diagnostics and document symbols.
 
 ## Specification
 
@@ -53,6 +54,7 @@ Language-specific implementations for parsing and rendering Carve.
 ### Rust
 
 - [markup-carve/carve-rs](https://github.com/markup-carve/carve-rs) - Rust parser and HTML renderer with a `carve` CLI binary; passes the upstream spec corpus.
+- [markup-carve/carve-wasm](https://github.com/markup-carve/carve-wasm) - WebAssembly bindings for the Rust implementation.
 
 <!-- Add additional language sections (Go, Python, Ruby, …) as implementations land -->
 
@@ -60,13 +62,14 @@ Language-specific implementations for parsing and rendering Carve.
 
 Syntax highlighting and editing support for popular editors.
 
+- [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting and `carve-lsp` integration.
 - [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
 
 ## Tools
 
 Command-line utilities for working with Carve documents.
 
-<!-- Add entries here -->
+- [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
 
 ## Converters
 
@@ -90,7 +93,7 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
-<!-- Add entries here -->
+- [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
 
 ## CMS Integration
 
