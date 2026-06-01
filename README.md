@@ -62,7 +62,7 @@ Language-specific implementations for parsing and rendering Carve.
 
 Syntax highlighting and editing support for popular editors.
 
-- [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting and `carve-lsp` integration.
+- [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
 
 ## Tools
