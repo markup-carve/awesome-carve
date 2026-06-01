@@ -30,6 +30,7 @@ Documentation and reference materials for Carve.
 
 - [markup-carve/carve](https://github.com/markup-carve/carve) - Language definition, philosophy, and quick reference.
 - [markup-carve/carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation.
+- [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Native Tree-sitter grammar for Carve.
 
 ## Specification
 
@@ -59,7 +60,7 @@ Language-specific implementations for parsing and rendering Carve.
 
 Syntax highlighting and editing support for popular editors.
 
-<!-- Add entries here -->
+- [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
 
 ## Tools
 
@@ -113,7 +114,7 @@ Build static websites with Carve content.
 
 Grammars and themes for displaying Carve with syntax colors.
 
-<!-- Add entries here -->
+- [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Tree-sitter grammar with queries for highlighting, injections, folds, indents, locals, and text objects.
 
 ## Sandboxes
 
