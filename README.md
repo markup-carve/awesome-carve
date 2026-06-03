@@ -81,7 +81,8 @@ Tools for converting Carve to other formats (HTML, PDF, plaintext, …).
 
 Tools for migrating from other markup formats to Carve.
 
-<!-- Add entries here -->
+- [markup-carve/carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
+- [markup-carve/carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
 
 ## Roundtrip Conversion
 
