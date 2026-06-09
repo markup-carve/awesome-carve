@@ -2,7 +2,7 @@
 
 > A curated list of Carve resources, tools, editors, and libraries.
 
-[Carve](https://github.com/markup-carve/carve) is a post-Djot lightweight markup language with visual mnemonics and human-centered design. It builds on [Djot](https://djot.net/)'s technical rigor — linear parsing, no expressive blind spots, arbitrary attributes — while adding visual mnemonics (`/italic/`, `*bold*`, `_underline_`, `~strike~`) and conventions that match how non-technical users naturally mark up text.
+[Carve](https://github.com/markup-carve/carve) is a post-Markdown lightweight markup language with visual mnemonics and human-centered design. It builds on [Djot](https://djot.net/)'s technical rigor — linear parsing, no expressive blind spots, arbitrary attributes — while adding visual mnemonics (`/italic/`, `*bold*`, `_underline_`, `~strike~`) and conventions that match how non-technical users naturally mark up text.
 
 ## Contents
 
@@ -37,7 +37,8 @@ Documentation and reference materials for Carve.
 
 Formal syntax specification and grammar definitions.
 
-<!-- Add entries here -->
+- [markup-carve/carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
+- [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
 
 ## Parsers & Libraries
 
@@ -49,7 +50,7 @@ Language-specific implementations for parsing and rendering Carve.
 
 ### PHP
 
-- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - PHP parser and renderer with a `carve` CLI binary; forked from djot-php, syntax migration in progress.
+- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - PHP parser and renderer with a `carve` CLI binary; implements the full Carve syntax and passes the spec corpus (forked from djot-php).
 
 ### Rust
 
@@ -70,6 +71,8 @@ Syntax highlighting and editing support for popular editors.
 Command-line utilities for working with Carve documents.
 
 - [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
+- [`carve` CLI (carve-php)](https://github.com/markup-carve/carve-php) - Convert `.crv` files to HTML (and import Markdown/HTML/BBCode/Djot) from the command line.
+- [`carve` CLI (carve-rs)](https://github.com/markup-carve/carve-rs) - Fast native `.crv` to HTML converter binary.
 
 ## Converters
 
@@ -88,19 +91,20 @@ Tools for migrating from other markup formats to Carve.
 
 Tools supporting lossless bidirectional conversion for content editing workflows. Essential for WYSIWYG integration where content is stored as Carve but edited as HTML — changes made in the visual editor convert back to Carve without losing syntax choices or formatting details.
 
-<!-- Add entries here -->
+- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - Round-trip mode (data attributes for Carve to HTML to Carve) plus an `HtmlToCarve` converter for WYSIWYG editing workflows.
 
 ## Framework Integration
 
 Carve support for web frameworks.
 
 - [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
+- [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve.
 
 ## CMS Integration
 
 Carve plugins for content management systems.
 
-<!-- Add entries here -->
+- [markup-carve/wp-carve](https://github.com/markup-carve/wp-carve) - WordPress plugin (carve-php engine) with live in-browser preview, multi-format paste, frontmatter-to-meta, render caching, and a REST API.
 
 ## Documentation Tools
 
@@ -124,13 +128,13 @@ Grammars and themes for displaying Carve with syntax colors.
 
 Interactive playgrounds for experimenting with Carve.
 
-<!-- Add entries here -->
+- [Carve Playground](https://markup-carve.github.io/carve/playground) - Type Carve and see the rendered HTML live in the browser.
 
 ## Example Sites
 
 Websites and blogs built with Carve.
 
-<!-- Add entries here -->
+- [Carve documentation site](https://markup-carve.github.io/carve/) - The official docs, built from Carve sources via vite-plugin-carve.
 
 ## Learning Resources
 
