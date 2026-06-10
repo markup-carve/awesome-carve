@@ -99,7 +99,7 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 Carve support for web frameworks.
 
 - [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
-- [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve.
+- [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
 
 ## CMS Integration
 
@@ -124,6 +124,9 @@ Build static websites with Carve content.
 Grammars and themes for displaying Carve with syntax colors.
 
 - [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Tree-sitter grammar with queries for highlighting, injections, folds, indents, locals, and text objects.
+- [markup-carve/carve-grammars `prism/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/prism/carve.js) - Prism grammar for highlighting Carve source on the web (`Prism.languages.carve`).
+- [markup-carve/carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - highlight.js grammar for highlighting Carve source on the web (ESM, CommonJS, or classic `<script>`).
+- [markup-carve/vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
 
 ## Sandboxes
 
