@@ -63,6 +63,7 @@ Language-specific implementations for parsing and rendering Carve.
 
 Syntax highlighting and editing support for popular editors.
 
+- [markup-carve/intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` and `.carve` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
 - [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
 
