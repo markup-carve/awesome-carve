@@ -71,6 +71,10 @@ Command-line utilities for working with Carve documents.
 
 - [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
 
+### Validators & Linters
+
+- [`carve lint`](https://github.com/markup-carve/carve-js#cli) - Validator in the carve-js CLI. Flags problems that parse but render wrong: broken `</#id>` cross-references, duplicate heading ids, trailing `{…}` heading attributes, legacy `raw FORMAT` fences, and block markers that leaked as plain text. Exits non-zero, so it works as a CI gate; the same checks surface live in editors via [carve-lsp](https://github.com/markup-carve/carve-lsp).
+
 ## Converters
 
 Tools for converting Carve to other formats (HTML, PDF, plaintext, …).
