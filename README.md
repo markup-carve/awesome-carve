@@ -102,6 +102,8 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
+- [markup-carve/symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
+- [markup-carve/symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 - [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
 - [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve.
 
