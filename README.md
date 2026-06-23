@@ -59,11 +59,11 @@ Language-specific implementations for parsing and rendering Carve.
 
 ### Python
 
-- [python-carve](https://github.com/markup-carve/python-carve) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
+- [carve-py](https://github.com/markup-carve/carve-py) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
 
 ### Go
 
-- [go-carve](https://github.com/markup-carve/go-carve) - Pure-Go module (no cgo): embeds a WASI build of carve-rs and runs it via wazero. `ToHTML` output byte-identical to the carve-rs CLI.
+- [carve-go](https://github.com/markup-carve/carve-go) - Pure-Go module (no cgo): embeds a WASI build of carve-rs and runs it via wazero. `ToHTML` output byte-identical to the carve-rs CLI.
 
 ### Ruby
 
@@ -134,7 +134,7 @@ Carve plugins for content management systems.
 
 Generate documentation from Carve source files.
 
-- [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv`/`.carve` pages via python-carve, with per-extension config and full nav/path support.
+- [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv`/`.carve` pages via carve-py, with per-extension config and full nav/path support.
 
 ## Static Site Generators
 
