@@ -125,7 +125,7 @@ Carve plugins for content management systems.
 
 Generate documentation from Carve source files.
 
-<!-- Add entries here -->
+- [markup-carve/mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv`/`.carve` pages via python-carve, with per-extension config and full nav/path support.
 
 ## Static Site Generators
 
