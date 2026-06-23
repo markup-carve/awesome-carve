@@ -78,9 +78,9 @@ Syntax highlighting and editing support for popular editors.
 - [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` and `.carve` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
 - [vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
-- [carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
-- [carve-vim](https://github.com/markup-carve/carve-vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
-- [carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
+- [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
+- [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
+- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 
 ## Tools
