@@ -71,7 +71,7 @@ Syntax highlighting and editing support for popular editors.
 - [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
 - [markup-carve/carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
-- [markup-carve/carve.vim](https://github.com/markup-carve/carve.vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
+- [markup-carve/carve-vim](https://github.com/markup-carve/carve-vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
 - [markup-carve/carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
 
 ## Tools
