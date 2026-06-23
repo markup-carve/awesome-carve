@@ -97,9 +97,12 @@ Command-line utilities for working with Carve documents.
 
 ## Converters
 
-Tools for converting Carve to other formats (HTML, PDF, plaintext, …).
+Render Carve to other output formats. All four reference engines ship the same renderer set, selectable by CLI flag or API.
 
-<!-- Add entries here -->
+- **Carve to HTML** - the default output of every engine: [carve-js](https://github.com/markup-carve/carve-js) `renderHtml`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --html`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/HtmlRenderer.php) `HtmlRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_html`.
+- **Carve to Markdown** - [carve-js](https://github.com/markup-carve/carve-js) `renderMarkdown`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --markdown`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/MarkdownRenderer.php) `MarkdownRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_markdown`.
+- **Carve to plain text** - [carve-js](https://github.com/markup-carve/carve-js) `renderPlain`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --plain`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/PlainTextRenderer.php) `PlainTextRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_plain_text`.
+- **Carve to ANSI (terminal)** - [carve-js](https://github.com/markup-carve/carve-js) `renderAnsi`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --ansi`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/AnsiRenderer.php) `AnsiRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_ansi`.
 
 ## Migration
 
