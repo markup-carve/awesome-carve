@@ -57,7 +57,11 @@ Language-specific implementations for parsing and rendering Carve.
 - [markup-carve/carve-rs](https://github.com/markup-carve/carve-rs) - Rust parser and HTML renderer with a `carve` CLI binary; passes the upstream spec corpus.
 - [markup-carve/carve-wasm](https://github.com/markup-carve/carve-wasm) - WebAssembly bindings for the Rust implementation.
 
-<!-- Add additional language sections (Go, Python, Ruby, …) as implementations land -->
+### Python
+
+- [markup-carve/python-carve](https://github.com/markup-carve/python-carve) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
+
+<!-- Add additional language sections (Go, Ruby, …) as implementations land -->
 
 ## Editors & IDE Support
 
@@ -66,6 +70,9 @@ Syntax highlighting and editing support for popular editors.
 - [markup-carve/intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` and `.carve` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
 - [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
+- [markup-carve/carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
+- [markup-carve/carve.vim](https://github.com/markup-carve/carve.vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
+- [markup-carve/carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
 
 ## Tools
 
@@ -106,6 +113,7 @@ Carve support for web frameworks.
 - [markup-carve/symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 - [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
 - [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
+- [markup-carve/carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components (and a `useCarveHtml` hook/composable) that render Carve to HTML via carve-js, with per-framework subpath exports, SSR support, and safe-by-default raw-HTML escaping.
 
 ## CMS Integration
 
@@ -139,6 +147,7 @@ Grammars and themes for displaying Carve with syntax colors.
 Interactive playgrounds for experimenting with Carve.
 
 - [Carve Playground](https://markup-carve.github.io/carve/playground) - Type Carve and see the rendered HTML live in the browser.
+- [markup-carve/carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve built on the carve-grammars Tiptap kit: visual editing, a live Carve source pane, and an HTML preview, with round-trip import via carve-js.
 
 ## Example Sites
 
