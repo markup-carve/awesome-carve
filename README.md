@@ -61,6 +61,14 @@ Language-specific implementations for parsing and rendering Carve.
 
 - [python-carve](https://github.com/markup-carve/python-carve) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
 
+### Go
+
+- [go-carve](https://github.com/markup-carve/go-carve) - Pure-Go module (no cgo): embeds a WASI build of carve-rs and runs it via wazero. `ToHTML` output byte-identical to the carve-rs CLI.
+
+### Ruby
+
+- [carve-rb](https://github.com/markup-carve/carve-rb) - Native Ruby gem (magnus over carve-rs); `Carve.to_html(source, extensions:)`, output byte-identical to the carve-rs CLI.
+
 <!-- Add additional language sections (Go, Ruby, …) as implementations land -->
 
 ## Editors & IDE Support
@@ -73,6 +81,7 @@ Syntax highlighting and editing support for popular editors.
 - [carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
 - [carve-vim](https://github.com/markup-carve/carve-vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
 - [carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
+- [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 
 ## Tools
 
