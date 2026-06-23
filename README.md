@@ -142,6 +142,8 @@ Build static websites with Carve content.
 
 - [astro-carve](https://github.com/markup-carve/astro-carve) - Astro integration: import `.crv`/`.carve` files into Astro pages and components as rendered HTML with frontmatter.
 - [eleventy-carve](https://github.com/markup-carve/eleventy-carve) - Eleventy (11ty) plugin adding `.crv`/`.carve` as a template format, with Carve frontmatter flowing into the data cascade.
+- [hugo-carve](https://github.com/markup-carve/hugo-carve) - Hugo preprocessor (via carve-go) that converts `.crv`/`.carve` content to HTML pages, preserving front matter. (Hugo has no markup-plugin API, so it is a convert-then-build step.)
+- [jekyll-carve](https://github.com/markup-carve/jekyll-carve) - Jekyll converter plugin rendering `.crv`/`.carve` pages via the carve Ruby gem.
 
 ## Syntax Highlighting
 
