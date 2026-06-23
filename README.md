@@ -131,7 +131,8 @@ Generate documentation from Carve source files.
 
 Build static websites with Carve content.
 
-<!-- Add entries here -->
+- [astro-carve](https://github.com/markup-carve/astro-carve) - Astro integration: import `.crv`/`.carve` files into Astro pages and components as rendered HTML with frontmatter.
+- [eleventy-carve](https://github.com/markup-carve/eleventy-carve) - Eleventy (11ty) plugin adding `.crv`/`.carve` as a template format, with Carve frontmatter flowing into the data cascade.
 
 ## Syntax Highlighting
 
