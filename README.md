@@ -28,16 +28,16 @@
 
 Documentation and reference materials for Carve.
 
-- [markup-carve/carve](https://github.com/markup-carve/carve) - Language definition, philosophy, and quick reference.
-- [markup-carve/carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation.
-- [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Native Tree-sitter grammar for Carve.
-- [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for diagnostics and document symbols.
+- [carve](https://github.com/markup-carve/carve) - Language definition, philosophy, and quick reference.
+- [carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation.
+- [tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Native Tree-sitter grammar for Carve.
+- [carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for diagnostics and document symbols.
 
 ## Specification
 
 Formal syntax specification and grammar definitions.
 
-- [markup-carve/carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
+- [carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
 - [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
 
 ## Parsers & Libraries
@@ -46,20 +46,20 @@ Language-specific implementations for parsing and rendering Carve.
 
 ### JavaScript / TypeScript
 
-- [markup-carve/carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation of the Carve markup language.
+- [carve-js](https://github.com/markup-carve/carve-js) - Reference TypeScript implementation of the Carve markup language.
 
 ### PHP
 
-- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - PHP parser and renderer with a `carve` CLI binary; implements the full Carve syntax and passes the spec corpus (forked from djot-php).
+- [carve-php](https://github.com/markup-carve/carve-php) - PHP parser and renderer with a `carve` CLI binary; implements the full Carve syntax and passes the spec corpus (forked from djot-php).
 
 ### Rust
 
-- [markup-carve/carve-rs](https://github.com/markup-carve/carve-rs) - Rust parser and HTML renderer with a `carve` CLI binary; passes the upstream spec corpus.
-- [markup-carve/carve-wasm](https://github.com/markup-carve/carve-wasm) - WebAssembly bindings for the Rust implementation.
+- [carve-rs](https://github.com/markup-carve/carve-rs) - Rust parser and HTML renderer with a `carve` CLI binary; passes the upstream spec corpus.
+- [carve-wasm](https://github.com/markup-carve/carve-wasm) - WebAssembly bindings for the Rust implementation.
 
 ### Python
 
-- [markup-carve/python-carve](https://github.com/markup-carve/python-carve) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
+- [python-carve](https://github.com/markup-carve/python-carve) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
 
 <!-- Add additional language sections (Go, Ruby, …) as implementations land -->
 
@@ -67,18 +67,18 @@ Language-specific implementations for parsing and rendering Carve.
 
 Syntax highlighting and editing support for popular editors.
 
-- [markup-carve/intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` and `.carve` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
-- [markup-carve/vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
-- [markup-carve/zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
-- [markup-carve/carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
-- [markup-carve/carve-vim](https://github.com/markup-carve/carve-vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
-- [markup-carve/carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
+- [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` and `.carve` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
+- [vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` and `.carve` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
+- [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` and `.carve` files, backed by the native Tree-sitter grammar.
+- [carve-emacs](https://github.com/markup-carve/carve-emacs) - Emacs major mode (`carve-mode`) for `.crv` and `.carve` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
+- [carve-vim](https://github.com/markup-carve/carve-vim) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
+- [carve-sublime](https://github.com/markup-carve/carve-sublime) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
 
 ## Tools
 
 Command-line utilities for working with Carve documents.
 
-- [markup-carve/carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
+- [carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
 - [`carve` CLI (carve-php)](https://github.com/markup-carve/carve-php) - Convert `.crv` files to HTML (and import Markdown/HTML/BBCode/Djot) from the command line.
 - [`carve` CLI (carve-rs)](https://github.com/markup-carve/carve-rs) - Fast native `.crv` to HTML converter binary.
 
@@ -96,36 +96,36 @@ Tools for converting Carve to other formats (HTML, PDF, plaintext, …).
 
 Tools for migrating from other markup formats to Carve.
 
-- [markup-carve/carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
-- [markup-carve/carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
+- [carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
+- [carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
 
 ## Roundtrip Conversion
 
 Tools supporting lossless bidirectional conversion for content editing workflows. Essential for WYSIWYG integration where content is stored as Carve but edited as HTML — changes made in the visual editor convert back to Carve without losing syntax choices or formatting details.
 
-- [markup-carve/carve-php](https://github.com/markup-carve/carve-php) - Round-trip mode (data attributes for Carve to HTML to Carve) plus an `HtmlToCarve` converter for WYSIWYG editing workflows.
+- [carve-php](https://github.com/markup-carve/carve-php) - Round-trip mode (data attributes for Carve to HTML to Carve) plus an `HtmlToCarve` converter for WYSIWYG editing workflows.
 
 ## Framework Integration
 
 Carve support for web frameworks.
 
-- [markup-carve/symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
-- [markup-carve/symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
-- [markup-carve/vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
-- [markup-carve/carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
-- [markup-carve/carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components (and a `useCarveHtml` hook/composable) that render Carve to HTML via carve-js, with per-framework subpath exports, SSR support, and safe-by-default raw-HTML escaping.
+- [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
+- [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
+- [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
+- [carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
+- [carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components (and a `useCarveHtml` hook/composable) that render Carve to HTML via carve-js, with per-framework subpath exports, SSR support, and safe-by-default raw-HTML escaping.
 
 ## CMS Integration
 
 Carve plugins for content management systems.
 
-- [markup-carve/wp-carve](https://github.com/markup-carve/wp-carve) - WordPress plugin (carve-php engine) with live in-browser preview, multi-format paste, frontmatter-to-meta, render caching, and a REST API.
+- [wp-carve](https://github.com/markup-carve/wp-carve) - WordPress plugin (carve-php engine) with live in-browser preview, multi-format paste, frontmatter-to-meta, render caching, and a REST API.
 
 ## Documentation Tools
 
 Generate documentation from Carve source files.
 
-- [markup-carve/mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv`/`.carve` pages via python-carve, with per-extension config and full nav/path support.
+- [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv`/`.carve` pages via python-carve, with per-extension config and full nav/path support.
 
 ## Static Site Generators
 
@@ -137,17 +137,17 @@ Build static websites with Carve content.
 
 Grammars and themes for displaying Carve with syntax colors.
 
-- [markup-carve/tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Tree-sitter grammar with queries for highlighting, injections, folds, indents, locals, and text objects.
-- [markup-carve/carve-grammars `prism/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/prism/carve.js) - Prism grammar for highlighting Carve source on the web (`Prism.languages.carve`).
-- [markup-carve/carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - highlight.js grammar for highlighting Carve source on the web (ESM, CommonJS, or classic `<script>`).
-- [markup-carve/vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
+- [tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Tree-sitter grammar with queries for highlighting, injections, folds, indents, locals, and text objects.
+- [carve-grammars `prism/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/prism/carve.js) - Prism grammar for highlighting Carve source on the web (`Prism.languages.carve`).
+- [carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - highlight.js grammar for highlighting Carve source on the web (ESM, CommonJS, or classic `<script>`).
+- [vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
 
 ## Sandboxes
 
 Interactive playgrounds for experimenting with Carve.
 
 - [Carve Playground](https://markup-carve.github.io/carve/playground) - Type Carve and see the rendered HTML live in the browser.
-- [markup-carve/carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve built on the carve-grammars Tiptap kit: visual editing, a live Carve source pane, and an HTML preview, with round-trip import via carve-js.
+- [carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve built on the carve-grammars Tiptap kit: visual editing, a live Carve source pane, and an HTML preview, with round-trip import via carve-js.
 
 ## Example Sites
 
