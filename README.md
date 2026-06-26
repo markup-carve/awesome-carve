@@ -39,6 +39,7 @@ Formal syntax specification and grammar definitions.
 
 - [carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
 - [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
+- [Conformance test suite](https://github.com/markup-carve/carve/tree/main/tests/corpus) - The shared spec corpus: input `.crv` paired with expected `.html`, generated from `docs/examples.md`. Also emitted in the djot.js fenced format at [`tests/spec`](https://github.com/markup-carve/carve/tree/main/tests/spec), plus a feature-tagged Tier-2 set in `tests/corpus-optional`. Every implementation consumes it as a git submodule; new slugs are drift-guarded per impl.
 
 ## Parsers & Libraries
 
@@ -94,6 +95,10 @@ Command-line utilities for working with Carve documents.
 ### Validators & Linters
 
 - [`carve lint`](https://github.com/markup-carve/carve-js#cli) - Validator in the carve-js CLI. Flags problems that parse but render wrong: broken `</#id>` cross-references, duplicate heading ids, trailing `{…}` heading attributes, legacy `raw FORMAT` fences, and block markers that leaked as plain text. Exits non-zero, so it works as a CI gate; the same checks surface live in editors via [carve-lsp](https://github.com/markup-carve/carve-lsp).
+
+### Formatters
+
+- [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical Carve formatter, in the `carve` CLI of all three engines ([carve-js](https://github.com/markup-carve/carve-js), [carve-php](https://github.com/markup-carve/carve-php), [carve-rs](https://github.com/markup-carve/carve-rs)) with byte-identical output. Conservative, idempotent, and semantic-preserving (the rendered HTML is unchanged): normalizes whitespace, list markers, headings, fence lengths, and attribute spacing. `carve fmt -w` rewrites in place; `carve fmt --check` is a CI gate. The serializer is also exposed programmatically (`carveToCarve` / `to_carve`).
 
 ## Converters
 
