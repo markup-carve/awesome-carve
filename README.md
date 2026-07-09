@@ -130,6 +130,7 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
+- [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php: `@carve` / `@carveRaw` / `@carveText` Blade directives, a `Carve` facade with named converter profiles (including the static graceful-degradation mode), a `ValidCarve` validation rule, and content-hash render caching.
 - [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
 - [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 - [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` and `.carve` files as rendered HTML modules.
