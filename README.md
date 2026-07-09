@@ -130,6 +130,7 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
+- [cakephp-markup](https://github.com/dereuromark/cakephp-markup) - CakePHP plugin rendering Carve to HTML via carve-php: a `CarveHelper` for converting Carve in templates, a `CarveView` for rendering `.carve` template files with variable substitution, and safe-mode and profile configuration (also supports Markdown, BBCode, and Djot).
 - [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php: `@carve` / `@carveRaw` / `@carveText` Blade directives, a `Carve` facade with named converter profiles (including the static graceful-degradation mode), a `ValidCarve` validation rule, and content-hash render caching.
 - [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve: Blade directives, facade and named profiles, form validation, a safe-mode comparison, and the static graceful-degradation mode rendered side by side with the interactive output.
 - [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
