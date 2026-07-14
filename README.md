@@ -189,7 +189,7 @@ Articles and tutorials for learning Carve.
 
 ### Articles
 
-- [Twenty years of Markdown hindsight, in one markup language](https://www.dereuromark.de/2026/07/13/twenty-years-of-markdown-hindsight-in-one-markup-language-carve/) - What Carve keeps from Markdown and what it fixes after twenty years of daily use: visual-mnemonic emphasis, word-boundary-safe identifiers, one meaning per construct, tables with rowspan/colspan, document-grade features, security in the spec, and byte-identical output across three reference implementations.
+- [Twenty years of Markdown hindsight, in one markup language](https://www.dereuromark.de/2026/07/13/twenty-years-of-markdown-hindsight-in-one-markup-language-carve/) - What Carve keeps from Markdown, and what it fixes.
 
 ### Tutorials
 
