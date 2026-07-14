@@ -22,6 +22,7 @@
 - [Sandboxes](#sandboxes)
 - [Example Sites](#example-sites)
 - [Learning Resources](#learning-resources)
+- [Related Languages](#related-languages)
 - [Community](#community)
 
 ## Official Resources
@@ -194,6 +195,15 @@ Articles and tutorials for learning Carve.
 ### Tutorials
 
 <!-- Add entries here -->
+
+## Related Languages
+
+The markup languages Carve descends from, and their ecosystems.
+
+- [Djot](https://djot.net/) - John MacFarlane's light markup syntax, the technical basis Carve builds on: linear parsing, no expressive blind spots, arbitrary attributes on every element. Carve keeps that core and changes the surface syntax.
+- [awesome-djot](https://github.com/dereuromark/awesome-djot) - Curated list of Djot resources, tools, editors, and libraries.
+- [Djot to Carve conversion](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - carve-php converts existing Djot documents to Carve (alongside Markdown, HTML, and BBCode).
+- [Divergence from Djot](https://markup-carve.github.io/carve/divergence-from-djot) - What Carve changes and why, construct by construct.
 
 ## Community
 
