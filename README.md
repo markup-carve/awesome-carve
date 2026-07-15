@@ -111,7 +111,9 @@ Render Carve to other output formats. All three engines (carve-js, carve-php, ca
 - **Carve to Markdown** - [carve-js](https://github.com/markup-carve/carve-js) `renderMarkdown`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --markdown`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/MarkdownRenderer.php) `MarkdownRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_markdown`.
 - **Carve to plain text** - [carve-js](https://github.com/markup-carve/carve-js) `renderPlain`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --plain`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/PlainTextRenderer.php) `PlainTextRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_plain_text`.
 - **Carve to ANSI (terminal)** - [carve-js](https://github.com/markup-carve/carve-js) `renderAnsi`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --ansi`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/AnsiRenderer.php) `AnsiRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_ansi`.
-- **Carve to PDF** - [carve-hexapdf](https://github.com/markup-carve/carve-hexapdf) renders Carve to PDF via the pure-Ruby HexaPDF engine.
+- **Carve to PDF** - two engines:
+  - [carve-pdf](https://github.com/markup-carve/carve-pdf) - the `crv2pdf` CLI renders via headless Chrome (CDP) with a pluggable PHP or JS Carve backend; also emits standalone HTML, Markdown, and text, with batch and watch modes.
+  - [carve-hexapdf](https://github.com/markup-carve/carve-hexapdf) - native PDF via the pure-Ruby HexaPDF engine (no browser).
 
 ## Migration
 
