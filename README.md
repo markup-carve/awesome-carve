@@ -114,6 +114,7 @@ Render Carve to other output formats. All three engines (carve-js, carve-php, ca
 - **Carve to PDF** - two engines:
   - [carve-pdf](https://github.com/markup-carve/carve-pdf) - the `crv2pdf` CLI renders via headless Chrome (CDP) with a pluggable PHP or JS Carve backend; also emits standalone HTML, Markdown, and text, with batch and watch modes.
   - [carve-hexapdf](https://github.com/markup-carve/carve-hexapdf) - native PDF via the pure-Ruby HexaPDF engine (no browser).
+- **Carve to LaTeX, Typst, DOCX, and every pandoc writer** - [pandoc-carve](https://github.com/markup-carve/pandoc-carve) - converts the Carve AST to Pandoc's JSON AST, so one Carve document reaches any pandoc output format; also makes `{=latex}`-style raw spans fire for their target writer.
 
 ## Migration
 
@@ -121,6 +122,7 @@ Tools for migrating from other markup formats to Carve.
 
 - [carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
 - [carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
+- [pandoc-carve import](https://github.com/markup-carve/pandoc-carve) - anything pandoc reads (DOCX, LaTeX, RST, Org, MediaWiki, ...) → Carve, via the Pandoc AST and the `carve fmt` serializer (`pandoc-carve doc.docx -f docx -o doc.crv`).
 
 ## Roundtrip Conversion
 
