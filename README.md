@@ -11,6 +11,7 @@
 - [Parsers & Libraries](#parsers--libraries)
 - [Editors & IDE Support](#editors--ide-support)
 - [Tools](#tools)
+- [AI & Agent Tooling](#ai--agent-tooling)
 - [Converters](#converters)
 - [Migration](#migration)
 - [Roundtrip Conversion](#roundtrip-conversion)
@@ -102,6 +103,12 @@ Command-line utilities for working with Carve documents.
 ### Benchmarks
 
 - [carve-bench](https://github.com/markup-carve/carve-bench) - Cross-engine render performance benchmarks: per-engine in-process timing harnesses (carve-js, carve-php, carve-rs) over a fixed document set, with an orchestrator that writes a results table. A speed comparison; correctness is covered by the shared conformance corpus.
+
+## AI & Agent Tooling
+
+Skills and resources for AI coding tools and LLM agents writing Carve.
+
+- [carve-skill](https://github.com/markup-carve/carve-skill) - A Claude Code / agent authoring skill (`carve-authoring`) that teaches AI tools to write valid `.crv`. Front-loads the syntax that diverges from Markdown/Djot (swapped emphasis delimiters, braced-only sup/sub) and the traps that silently mis-render, plus the `carve lint` round-trip loop. Content is sourced from the canonical spec docs via a git submodule and drift-guarded in CI, so it can't rot out of sync with the language.
 
 ## Converters
 
