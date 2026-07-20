@@ -81,7 +81,7 @@ Syntax highlighting and editing support for popular editors.
 - [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` files, backed by the native Tree-sitter grammar.
 - [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode (`carve-mode`) for `.crv` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
-- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package with a `.sublime-syntax` highlighter authored from the shared TextMate grammar.
+- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: `.sublime-syntax` highlighting with real embedded language syntaxes inside fenced code, a heading outline for Goto Symbol, cross-reference navigation, `carve fmt` integration, a build system wrapping `carve lint`, and snippets.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 
 ## Tools
@@ -98,7 +98,7 @@ Command-line utilities for working with Carve documents.
 
 ### Formatters
 
-- [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical Carve formatter, in the `carve` CLI of all three engines ([carve-js](https://github.com/markup-carve/carve-js), [carve-php](https://github.com/markup-carve/carve-php), [carve-rs](https://github.com/markup-carve/carve-rs)) with byte-identical output. Conservative, idempotent, and semantic-preserving (the rendered HTML is unchanged): normalizes whitespace, list markers, headings, fence lengths, and attribute spacing. `carve fmt -w` rewrites in place; `carve fmt --check` is a CI gate. The serializer is also exposed programmatically (`carveToCarve` / `to_carve`).
+- [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical Carve formatter, in the `carve` CLI of all three engines ([carve-js](https://github.com/markup-carve/carve-js), [carve-php](https://github.com/markup-carve/carve-php), [carve-rs](https://github.com/markup-carve/carve-rs)) with byte-identical output. Conservative, idempotent, and semantic-preserving (the rendered HTML is unchanged): normalizes whitespace, headings, fence lengths, and attribute spacing. List markers are deliberately preserved, not normalized - the bullet character and ordered delimiter are semantic in Carve (a different marker starts a new list), so rewriting them would merge adjacent lists. `carve fmt -w` rewrites in place; `carve fmt --check` is a CI gate. The serializer is also exposed programmatically (`carveToCarve` / `to_carve`).
 
 ### Benchmarks
 
