@@ -82,7 +82,6 @@ Syntax highlighting and editing support for popular editors.
 - [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode (`carve-mode`) for `.crv` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
 - [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: `.sublime-syntax` highlighting with real embedded language syntaxes inside fenced code, a heading outline for Goto Symbol, cross-reference navigation, `carve fmt` integration, a build system wrapping `carve lint`, and snippets.
-- [LSP-carve](https://github.com/markup-carve/LSP-carve) - Sublime Text LSP client for carve-lsp: diagnostics, code actions, hover, go-to definition, find references, rename, and formatting. Installs the server itself, so no global Node is needed. Complements sublime-carve.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 
 ## Tools
