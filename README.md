@@ -212,3 +212,4 @@ Places to discuss Carve and get help.
 
 - [GitHub Discussions](https://github.com/markup-carve/carve/discussions) - Discussion forum for Carve.
 - [GitHub Issues](https://github.com/markup-carve/carve/issues) - Report bugs and request features.
+- [r/markup_carve](https://www.reddit.com/r/markup_carve) - Subreddit for Carve news, questions, and showing what you built.

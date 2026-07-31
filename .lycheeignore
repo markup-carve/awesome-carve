@@ -1,0 +1,4 @@
+# Reddit answers unauthenticated clients with HTTP 403 - including CI link
+# checkers - so a perfectly live subreddit link fails the check while resolving
+# fine in a browser. Check Reddit links by hand when reviewing.
+https://www\.reddit\.com/.*
