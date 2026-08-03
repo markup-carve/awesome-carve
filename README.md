@@ -195,6 +195,7 @@ Interactive playgrounds for experimenting with Carve.
 Websites and blogs built with Carve.
 
 - [Carve documentation site](https://markup-carve.github.io/carve/) - The official docs, built from Carve sources via vite-plugin-carve.
+- [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, authored in Carve and built by carve-press itself: home layout, generated blog and tag pages, client-side search, live `::: compare` and playground blocks, and a German locale sample.
 
 ## Learning Resources
 
