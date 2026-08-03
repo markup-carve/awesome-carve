@@ -122,6 +122,7 @@ Render Carve to other output formats. All three engines (carve-js, carve-php, ca
   - [carve-pdf](https://github.com/markup-carve/carve-pdf) - the `crv2pdf` CLI renders via headless Chrome (CDP) with a pluggable PHP or JS Carve backend; also emits standalone HTML, Markdown, and text, with batch and watch modes.
   - [carve-hexapdf](https://github.com/markup-carve/carve-hexapdf) - native PDF via the pure-Ruby HexaPDF engine (no browser).
 - **Carve to LaTeX, Typst, DOCX, and every pandoc writer** - [pandoc-carve](https://github.com/markup-carve/pandoc-carve) - converts the Carve AST to Pandoc's JSON AST, so one Carve document reaches any pandoc output format; also makes `{=latex}`-style raw spans fire for their target writer.
+- **Carve to chat-platform markup** - [carve-php-chat](https://github.com/markup-carve/carve-php-chat) - renders a Carve document to WhatsApp, Slack, Telegram or Discord markup, and reports what could not survive the trip. Each platform accepts a different, mutually incompatible subset - different link syntax, escaping rules and length caps - and each is a JSON flavor definition rather than a class, so adding one needs no PHP.
 
 ## Migration
 
@@ -168,6 +169,7 @@ Generate documentation from Carve source files.
 Build static websites with Carve content.
 
 - [astro-carve](https://github.com/markup-carve/astro-carve) - Astro integration: import `.crv` files into Astro pages and components as rendered HTML with frontmatter.
+- [carve-press](https://github.com/markup-carve/carve-press) - First-party static site generator: discovers `.crv` pages, expands includes, renders through carve-js with a Shiki highlighting stack, validates links and cross-references at build time, and ships a dev server with incremental rebuilds. Its own documentation site is built with it.
 - [eleventy-carve](https://github.com/markup-carve/eleventy-carve) - Eleventy (11ty) plugin adding `.crv` as a template format, with Carve frontmatter flowing into the data cascade.
 - [hugo-carve](https://github.com/markup-carve/hugo-carve) - Hugo preprocessor (via carve-go) that converts `.crv` content to HTML pages, preserving front matter. (Hugo has no markup-plugin API, so it is a convert-then-build step.)
 - [jekyll-carve](https://github.com/markup-carve/jekyll-carve) - Jekyll converter plugin rendering `.crv` pages via the carve-lang Ruby gem.
