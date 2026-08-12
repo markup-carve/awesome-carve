@@ -131,6 +131,7 @@ Tools for migrating from other markup formats to Carve.
 - [carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
 - [carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
 - [pandoc-carve import](https://github.com/markup-carve/pandoc-carve) - anything pandoc reads (DOCX, LaTeX, RST, Org, MediaWiki, ...) → Carve, via the Pandoc AST and the `carve fmt` serializer (`pandoc-carve doc.docx -f docx -o doc.crv`).
+- [pdf-to-carve](https://github.com/markup-carve/pdf-to-carve) - PDFs and document images → Carve. Born-digital PDFs are converted without any AI; scans and images can use an optional OpenAI-compatible vision path. Extraction never produces Carve syntax directly: it emits a strict, versioned JSON document that a deterministic writer serializes, then verifies with `carve fmt`/`carve lint`. Supports text, vision and hybrid (image plus positioned text) modes, JSON replay without a second API call, and an HTML review report.
 
 ## Roundtrip Conversion
 
