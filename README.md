@@ -103,6 +103,7 @@ Command-line utilities for working with Carve documents.
 ### Benchmarks
 
 - [carve-bench](https://github.com/markup-carve/carve-bench) - Cross-engine render performance benchmarks: per-engine in-process timing harnesses (carve-js, carve-php, carve-rs) over a fixed document set, with an orchestrator that writes a results table. A speed comparison; correctness is covered by the shared conformance corpus.
+- [pandoc-format-fidelity](https://github.com/markup-carve/pandoc-format-fidelity) - How much of a document survives a conversion, across every format pandoc ships. Each probe is a pair of pandoc ASTs differing in one feature, answering whether a writer can express it and whether it reads back unchanged. Carve is scored on the same probes via the pandoc-carve bridge. A compatibility comparison, where carve-bench is a speed one.
 
 ## AI & Agent Tooling
 
