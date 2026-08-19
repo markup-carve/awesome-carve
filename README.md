@@ -165,6 +165,7 @@ Carve plugins for content management systems.
 Generate documentation from Carve source files.
 
 - [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv` pages via carve-py, with per-extension config and full nav/path support.
+- [zensical-carve](https://github.com/markup-carve/zensical-carve) - Zensical support (the successor to MkDocs, from the Material for MkDocs team): a `carve` custom fence for blocks inside Markdown pages, plus a preprocessor that renders whole `.crv` pages, lifting Carve frontmatter into the page.
 
 ## Static Site Generators
 
