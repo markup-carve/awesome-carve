@@ -1,0 +1,28 @@
+name: Coverage
+
+# A curated list that silently omits its own org's work reads as a statement
+# about those projects. Three repos were absent on 2026-08-21 and nothing
+# noticed, so this is a gate rather than a habit.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  schedule:
+    # A new repo in the org makes this list stale without anything in this
+    # repository changing, so push and pull_request alone cannot catch it.
+    - cron: '17 6 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  coverage:
+    name: Every org repo is listed or exempt
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check coverage
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: ./scripts/check-coverage.sh

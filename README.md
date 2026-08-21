@@ -82,6 +82,7 @@ Syntax highlighting and editing support for popular editors.
 - [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode (`carve-mode`) for `.crv` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
 - [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: `.sublime-syntax` highlighting with real embedded language syntaxes inside fenced code, a heading outline for Goto Symbol, cross-reference navigation, `carve fmt` integration, a build system wrapping `carve lint`, and snippets.
+- [sublime-carve-lsp](https://github.com/markup-carve/sublime-carve-lsp) - the language-server half of Sublime Text support, packaged separately from the syntax: diagnostics for Markdown habits that render wrong in Carve, quick fixes, hover, go-to-definition and find-references across a workspace, workspace-wide rename, folding, completion, and `carve fmt` through the standard LSP format command.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 - [obsidian-carve](https://github.com/markup-carve/obsidian-carve) - Obsidian community plugin registering `.crv` notes with safe reading and editable source views; raw HTML is disabled by default.
 
@@ -124,9 +125,10 @@ Render Carve to other output formats. All three engines (carve-js, carve-php, ca
 - **Carve to Markdown** - [carve-js](https://github.com/markup-carve/carve-js) `renderMarkdown`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --markdown`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/MarkdownRenderer.php) `MarkdownRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_markdown`.
 - **Carve to plain text** - [carve-js](https://github.com/markup-carve/carve-js) `renderPlain`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --plain`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/PlainTextRenderer.php) `PlainTextRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_plain_text`.
 - **Carve to ANSI (terminal)** - [carve-js](https://github.com/markup-carve/carve-js) `renderAnsi`, [carve-rs](https://github.com/markup-carve/carve-rs) `carve --ansi`, [carve-php](https://github.com/markup-carve/carve-php/blob/main/src/Renderer/AnsiRenderer.php) `AnsiRenderer`, [carve-py](https://github.com/markup-carve/carve-py) `carve.to_ansi`.
-- **Carve to PDF** - two engines:
+- **Carve to PDF** - three routes:
   - [carve-pdf](https://github.com/markup-carve/carve-pdf) - the `crv2pdf` CLI renders via headless Chrome (CDP) with a pluggable PHP or JS Carve backend; also emits standalone HTML, Markdown, and text, with batch and watch modes.
   - [carve-hexapdf](https://github.com/markup-carve/carve-hexapdf) - native PDF via the pure-Ruby HexaPDF engine (no browser).
+  - [carve-sile](https://github.com/markup-carve/carve-sile) - typeset PDF via SILE and its Resilient classes, mapping the Carve AST onto real typesetting commands rather than to HTML first; composite figures come out as one numbered unit.
 - **Carve to LaTeX, Typst, DOCX, and every pandoc writer** - [pandoc-carve](https://github.com/markup-carve/pandoc-carve) - converts the Carve AST to Pandoc's JSON AST, so one Carve document reaches any pandoc output format; also makes `{=latex}`-style raw spans fire for their target writer.
 - **Carve to chat-platform markup** - [carve-php-chat](https://github.com/markup-carve/carve-php-chat) - renders a Carve document to WhatsApp, Slack, Telegram or Discord markup, and reports what could not survive the trip. Each platform accepts a different, mutually incompatible subset - different link syntax, escaping rules and length caps - and each is a JSON flavor definition rather than a class, so adding one needs no PHP.
 
@@ -205,6 +207,7 @@ Interactive playgrounds for experimenting with Carve.
 Websites and blogs built with Carve.
 
 - [Carve documentation site](https://markup-carve.github.io/carve/) - The official docs, built from Carve sources via vite-plugin-carve.
+- [Zensical Carve demo](https://github.com/markup-carve/zensical-carve-demo) - a Zensical site whose pages are written in Carve with every extension enabled, including the CSS that styles the constructs Material does not know about.
 - [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, authored in Carve and built by carve-press itself: home layout, generated blog and tag pages, client-side search, live `::: compare` and playground blocks, and a German locale sample.
 
 ## Learning Resources
