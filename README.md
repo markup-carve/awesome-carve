@@ -83,6 +83,7 @@ Syntax highlighting and editing support for popular editors.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
 - [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: `.sublime-syntax` highlighting with real embedded language syntaxes inside fenced code, a heading outline for Goto Symbol, cross-reference navigation, `carve fmt` integration, a build system wrapping `carve lint`, and snippets.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
+- [obsidian-carve](https://github.com/markup-carve/obsidian-carve) - Obsidian community plugin registering `.crv` notes with safe reading and editable source views; raw HTML is disabled by default.
 
 ## Tools
 
@@ -150,6 +151,7 @@ Carve support for web frameworks.
 - [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
 - [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 - [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` files as rendered HTML modules.
+- [webpack-loader-carve](https://github.com/markup-carve/webpack-loader-carve) - Webpack 5 loader for importing `.crv` files as build-time-rendered HTML modules, with a verified Next.js webpack build.
 - [carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
 - [carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components (and a `useCarveHtml` hook/composable) that render Carve to HTML via carve-js, with per-framework subpath exports, SSR support, and safe-by-default raw-HTML escaping.
 
@@ -165,6 +167,7 @@ Carve plugins for content management systems.
 Generate documentation from Carve source files.
 
 - [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv` pages via carve-py, with per-extension config and full nav/path support.
+- [docusaurus-carve](https://github.com/markup-carve/docusaurus-carve) - Docusaurus 3 docs plugin for `.crv` pages, delegating routes, sidebars, frontmatter, search metadata, and theming to the official docs plugin.
 - [zensical-carve](https://github.com/markup-carve/zensical-carve) - Zensical support (the successor to MkDocs, from the Material for MkDocs team): a `carve` custom fence for blocks inside Markdown pages, plus a preprocessor that renders whole `.crv` pages, lifting Carve frontmatter into the page.
 
 ## Static Site Generators
