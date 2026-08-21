@@ -101,6 +101,10 @@ Command-line utilities for working with Carve documents.
 
 - [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical Carve formatter, in the `carve` CLI of all three engines ([carve-js](https://github.com/markup-carve/carve-js), [carve-php](https://github.com/markup-carve/carve-php), [carve-rs](https://github.com/markup-carve/carve-rs)) with byte-identical output. Conservative, idempotent, and semantic-preserving (the rendered HTML is unchanged): normalizes whitespace, headings, fence lengths, and attribute spacing. List markers are deliberately preserved, not normalized - the bullet character and ordered delimiter are semantic in Carve (a different marker starts a new list), so rewriting them would merge adjacent lists. `carve fmt -w` rewrites in place; `carve fmt --check` is a CI gate. The serializer is also exposed programmatically (`carveToCarve` / `to_carve`).
 
+### Styling
+
+- [carve-css](https://github.com/markup-carve/carve-css) - The stylesheet for Carve's rendered HTML: admonitions, tab sets, code groups, code callouts, figures, footnotes, glossary, index, critic markup and the rest. Scoped under `.carve` and themed by overriding custom properties rather than selectors, in four layers (tokens, core, extensions, print). It exists because six repositories were each writing this CSS by hand and each covering a different subset - callouts, the glossary and the index were styled in exactly one of them. A coverage gate renders a fixture through the published engine and fails when a class or ARIA role reaching the page has no rule.
+
 ### Benchmarks
 
 - [carve-bench](https://github.com/markup-carve/carve-bench) - Cross-engine render performance benchmarks: per-engine in-process timing harnesses (carve-js, carve-php, carve-rs) over a fixed document set, with an orchestrator that writes a results table. A speed comparison; correctness is covered by the shared conformance corpus.
