@@ -22,22 +22,17 @@ README="${HERE}/README.md"
 #                           carve-rs's release workflow and lands on the first
 #                           release that ships binaries; list it under Tools
 #                           once `brew install markup-carve/carve/carve` works.
-#   docusaurus-carve      - scaffolded 2026-08-21, no code yet.
-#   obsidian-carve        - scaffolded 2026-08-21, no code yet.
-#   webpack-loader-carve  - scaffolded 2026-08-21, no code yet.
 #
-# The three scaffolds are exempt because a curated list that points a reader at
-# an empty repository is worse than one that omits it. Move each into README.md
-# in the same change that gives it something to install, and delete its line
-# here - that pairing is the point of listing them by name rather than adding a
-# blanket "skip empty repos" rule.
+# docusaurus-carve, obsidian-carve and webpack-loader-carve were exempt here
+# while they were empty scaffolds and are not any more: they have code and are
+# listed. That pairing - list it, delete its exemption, in one change - is why
+# these are named one at a time rather than covered by a blanket "skip empty
+# repos" rule. A stale exemption is worse than no exemption, because it would
+# let a listing be REMOVED without this check noticing.
 declare -a EXEMPT=(
   "awesome-carve"
   ".github"
   "homebrew-carve"
-  "docusaurus-carve"
-  "obsidian-carve"
-  "webpack-loader-carve"
 )
 
 if ! command -v gh > /dev/null 2>&1 || ! gh auth status > /dev/null 2>&1; then
