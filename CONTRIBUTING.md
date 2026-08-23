@@ -25,6 +25,7 @@ Please ensure your pull request adheres to the following guidelines:
 * End all descriptions with a full stop/period and no trailing whitespace.
 * Check your spelling and grammar.
 * Please keep the lists in alphabetical order.
+* A companion package that only extends a project already on the list does not get its own entry. The listed project's description covers it. `sublime-carve-lsp` is the worked example: it is the language-server half of Sublime Text support, and `sublime-carve` is what a reader looks for.
 
 Please make sure your suggestion meets all the criteria before submitting a pull request, or it may be closed without review.
 
