@@ -217,9 +217,9 @@ Articles and tutorials for learning Carve.
 
 ### Articles
 
-- [Pandoc: What survives a conversion?](https://www.dereuromark.de/2026/08/19/pandoc-what-survives-a-conversion/) - Measuring what Carve, Markdown and Djot lose when Pandoc converts between them.
-- [Twenty years of Markdown hindsight, in one markup language](https://www.dereuromark.de/2026/07/13/twenty-years-of-markdown-hindsight-in-one-markup-language-carve/) - What Carve keeps from Markdown, and what it fixes.
-- [Why Carve markup changes how you author rich text in Shopware 6](https://www.dereuromark.de/2026/07/17/why-carve-markup-changes-how-you-author-rich-text-in-shopware-6/) - Authoring rich text in Shopware 6 without pasting raw HTML.
+- 2026-07: [Twenty years of Markdown hindsight, in one markup language](https://www.dereuromark.de/2026/07/13/twenty-years-of-markdown-hindsight-in-one-markup-language-carve/) - What Carve keeps from Markdown, and what it fixes.
+- 2026-07: [Why Carve markup changes how you author rich text in Shopware 6](https://www.dereuromark.de/2026/07/17/why-carve-markup-changes-how-you-author-rich-text-in-shopware-6/) - Authoring rich text in Shopware 6 without pasting raw HTML.
+- 2026-08: [Pandoc: What survives a conversion?](https://www.dereuromark.de/2026/08/19/pandoc-what-survives-a-conversion/) - Measuring what Carve, Markdown and Djot lose when Pandoc converts between them.
 
 ### Tutorials
 

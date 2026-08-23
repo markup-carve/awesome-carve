@@ -22,9 +22,10 @@ Please ensure your pull request adheres to the following guidelines:
 * New categories or improvements to the existing categorization are welcome.
 * Keep descriptions short, clear, unbiased, and free of jargon.
 * Adheres to the following Markdown format: `[Name](LINK) - DESCRIPTION.`
+* **Articles carry their publication date** and use `- YYYY-MM: [Name](LINK) - DESCRIPTION.` instead, matching [awesome-djot](https://github.com/dereuromark/awesome-djot#articles). A reader wants to know how old a piece is before opening it, which a name cannot say.
 * End all descriptions with a full stop/period and no trailing whitespace.
 * Check your spelling and grammar.
-* Please keep the lists in alphabetical order.
+* Please keep the lists in alphabetical order. **Articles are the exception**: they sort oldest-first by that date, so the newest is always the last line.
 * A companion package that only extends a project already on the list does not get its own entry. The listed project's description covers it. `sublime-carve-lsp` is the worked example: it is the language-server half of Sublime Text support, and `sublime-carve` is what a reader looks for.
 
 Please make sure your suggestion meets all the criteria before submitting a pull request, or it may be closed without review.
