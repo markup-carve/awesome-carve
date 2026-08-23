@@ -152,9 +152,7 @@ Carve support for web frameworks.
 
 - [cakephp-markup](https://github.com/dereuromark/cakephp-markup) - CakePHP plugin rendering Carve to HTML via carve-php: a `CarveHelper` for converting Carve in templates, a `CarveView` for rendering `.crv` template files with variable substitution, and safe-mode and profile configuration.
 - [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php: `@carve` / `@carveRaw` / `@carveText` Blade directives, a `Carve` facade with named converter profiles (including the static graceful-degradation mode), a `ValidCarve` validation rule, and content-hash render caching.
-- [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve: Blade directives, facade and named profiles, form validation, a safe-mode comparison, and the static graceful-degradation mode rendered side by side with the interactive output.
 - [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
-- [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 - [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` files as rendered HTML modules.
 - [webpack-loader-carve](https://github.com/markup-carve/webpack-loader-carve) - Webpack 5 loader for importing `.crv` files as build-time-rendered HTML modules, with a verified Next.js webpack build.
 - [carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
@@ -205,11 +203,13 @@ Interactive playgrounds for experimenting with Carve.
 
 ## Example Sites
 
-Websites and blogs built with Carve.
+Websites, blogs, and runnable apps built with Carve.
 
 - [Carve documentation site](https://markup-carve.github.io/carve/) - The official docs, built from Carve sources via vite-plugin-carve.
 - [Zensical Carve demo](https://github.com/markup-carve/zensical-carve-demo) - a Zensical site whose pages are written in Carve with every extension enabled, including the CSS that styles the constructs Material does not know about.
 - [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, authored in Carve and built by carve-press itself: home layout, generated blog and tag pages, client-side search, live `::: compare` and playground blocks, and a German locale sample.
+- [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve: Blade directives, facade and named profiles, form validation, a safe-mode comparison, and the static graceful-degradation mode rendered side by side with the interactive output.
+- [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
 
 ## Learning Resources
 
