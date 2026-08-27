@@ -191,7 +191,7 @@ Grammars and themes for displaying Carve with syntax colors.
 - [carve-grammars `prism/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/prism/carve.js) - Prism grammar for highlighting Carve source on the web (`Prism.languages.carve`).
 - [highlightjs-carve](https://github.com/markup-carve/highlightjs-carve) - highlight.js language definition as its own npm package, which is the only route highlight.js leaves open: it no longer merges new language grammars into the core library. UMD and dependency-free, so a plain `<script>` registers it against a global `hljs` as readily as a bundler does.
 - [pygments-carve](https://github.com/markup-carve/pygments-carve) - Pygments lexer, found through the `pygments.lexers` entry point, so installing it is the whole integration: `carve` and `crv` become working fence words anywhere Pygments is the highlighter, MkDocs, Sphinx, Zensical and `pygmentize` included.
-- [rouge-carve](https://github.com/markup-carve/rouge-carve) - Rouge lexer, so Jekyll, Redcarpet and other Ruby tooling highlight Carve.
+- [rouge-carve](https://github.com/markup-carve/rouge-carve) - Rouge lexer, coloring Carve source wherever Rouge is the highlighter, such as a fenced `carve` block in a Jekyll post.
 - [carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - the same grammar as a file inside carve-grammars, beside the Prism and Shiki ones, for a consumer already depending on that package.
 - [vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
 
