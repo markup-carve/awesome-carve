@@ -112,8 +112,9 @@ Command-line utilities for working with Carve documents.
 
 ## AI & Agent Tooling
 
-Skills and resources for AI coding tools and LLM agents writing Carve.
+Skills and servers for AI coding tools and LLM agents writing Carve.
 
+- [carve-mcp](https://github.com/markup-carve/carve-mcp) - A local Model Context Protocol server backed by carve-js. It gives agents tools for linting, formatting, rendering, AST inspection and HTML/Markdown/Djot import, plus concise authoring resources. It needs no filesystem or network access. Not yet published - run it from source.
 - [carve-skill](https://github.com/markup-carve/carve-skill) - A Claude Code / agent authoring skill (`carve-authoring`) that teaches AI tools to write valid `.crv`. Front-loads the syntax that diverges from Markdown/Djot (swapped emphasis delimiters, braced-only sup/sub) and the traps that silently mis-render, plus the `carve lint` round-trip loop. Content is sourced from the canonical spec docs via a git submodule and drift-guarded in CI, so it can't rot out of sync with the language.
 
 ## Converters
