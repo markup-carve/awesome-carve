@@ -72,6 +72,10 @@ Language-specific implementations for parsing and rendering Carve.
 
 - [carve-rb](https://github.com/markup-carve/carve-rb) - Native Ruby gem (magnus over carve-rs); `Carve.to_html(source, extensions:)`, output byte-identical to the carve-rs CLI.
 
+### Echo
+
+- [echo-carve](https://github.com/markup-carve/echo-carve) - Bindings for the Echo programming language over the carve-rs engine through a small C ABI; `carve::to_html` renders Carve to HTML.
+
 ## Editors & IDE Support
 
 Standalone editors and editing support for popular editors and IDEs.
