@@ -210,6 +210,7 @@ Grammars and themes for displaying Carve with syntax colors.
 Interactive playgrounds for experimenting with Carve.
 
 - [Carve Playground](https://markup-carve.github.io/carve/playground) - Type Carve and see the rendered HTML live in the browser.
+- [carve-php sandbox](https://sandbox.dereuromark.de/sandbox/carve) - carve-php playground with converters, an AST inspector and extension demos.
 - [carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve built on the carve-grammars Tiptap kit: visual editing, a live Carve source pane, and an HTML preview, with round-trip import via carve-js.
 
 ## Example Sites
