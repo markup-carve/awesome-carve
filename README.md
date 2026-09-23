@@ -97,7 +97,7 @@ Command-line utilities for working with Carve documents.
 - [carve-lsp](https://github.com/markup-carve/carve-lsp) - Language server for editor integrations and tooling that speaks LSP.
 - [`carve` CLI (carve-php)](https://github.com/markup-carve/carve-php) - Convert `.crv` files to HTML (and import Markdown/HTML/BBCode/Djot) from the command line.
 - [`carve` CLI (carve-rs)](https://github.com/markup-carve/carve-rs) - Fast native `.crv` to HTML converter binary.
-- [homebrew-carve](https://github.com/markup-carve/homebrew-carve) - Homebrew tap for the carve-rs `carve` CLI on macOS and Linux: `brew install markup-carve/carve/carve`.
+- [homebrew-carve](https://github.com/markup-carve/homebrew-carve) - Homebrew tap for the `carve` CLI.
 
 ### Validators & Linters
 
@@ -221,7 +221,7 @@ Websites, blogs, and runnable apps built with Carve.
 - [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, authored in Carve and built by carve-press itself: home layout, generated blog and tag pages, client-side search, live `::: compare` and playground blocks, and a German locale sample.
 - [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve: Blade directives, facade and named profiles, form validation, a safe-mode comparison, and the static graceful-degradation mode rendered side by side with the interactive output.
 - [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
-- [tempest-carve-demo](https://github.com/markup-carve/tempest-carve-demo) - Runnable Tempest app demonstrating every feature of tempest-carve: the `<x-carve>` view component, profiles side by side, HTML, Markdown, plain-text and ANSI output from one source, and diagnostics. Also deployed as a [live demo](https://markup-carve.github.io/tempest-carve-demo/).
+- [tempest-carve-demo](https://github.com/markup-carve/tempest-carve-demo) - Runnable Tempest app demonstrating every feature of tempest-carve.
 
 ## Learning Resources
 
