@@ -19,6 +19,7 @@
 - [CMS Integration](#cms-integration)
 - [Documentation Tools](#documentation-tools)
 - [Static Site Generators](#static-site-generators)
+- [Presentations](#presentations)
 - [Syntax Highlighting](#syntax-highlighting)
 - [Sandboxes](#sandboxes)
 - [Example Sites](#example-sites)
@@ -192,6 +193,12 @@ Build static websites with Carve content.
 - [eleventy-carve](https://github.com/markup-carve/eleventy-carve) - Eleventy (11ty) plugin adding `.crv` as a template format, with Carve frontmatter flowing into the data cascade.
 - [hugo-carve](https://github.com/markup-carve/hugo-carve) - Hugo preprocessor (via carve-go) that converts `.crv` content to HTML pages, preserving front matter. (Hugo has no markup-plugin API, so it is a convert-then-build step.)
 - [jekyll-carve](https://github.com/markup-carve/jekyll-carve) - Jekyll converter plugin rendering `.crv` pages via the carve-lang Ruby gem.
+
+## Presentations
+
+Slide decks written in Carve.
+
+- [reveal-carve](https://github.com/markup-carve/reveal-carve) - reveal.js integration: a runtime plugin that renders `.crv` files as the deck loads, plus a Node build step and CLI with chapter directories, include expansion, slide directives for classes, notes and fragments, deck linting, a Markdown handout export and PDF printing. [Demo deck](https://markup-carve.github.io/reveal-carve/).
 
 ## Syntax Highlighting
 
