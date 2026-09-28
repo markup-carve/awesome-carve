@@ -41,7 +41,7 @@ Formal syntax specification and grammar definitions.
 
 - [carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
 - [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
-- [Conformance test suite](https://github.com/markup-carve/carve/tree/main/tests/corpus) - The shared spec corpus: input `.crv` paired with expected `.html`, generated from `docs/examples.md`. Also emitted in the djot.js fenced format at [`tests/spec`](https://github.com/markup-carve/carve/tree/main/tests/spec), plus a feature-tagged Tier-2 set in `tests/corpus-optional`. Every implementation consumes it as a git submodule; new slugs are drift-guarded per impl.
+- [Conformance test suite](https://github.com/markup-carve/carve/tree/main/tests/corpus) - Shared spec corpus: `.crv` input paired with expected `.html`, used by every implementation as a git submodule. Also in djot.js format at [`tests/spec`](https://github.com/markup-carve/carve/tree/main/tests/spec).
 - [carve-proofs](https://github.com/markup-carve/carve-proofs) - Machine-checked Rocq models of Carve parsing rules.
 
 ## Parsers & Libraries
@@ -64,7 +64,7 @@ Language-specific implementations for parsing and rendering Carve.
 
 ### Python
 
-- [carve-py](https://github.com/markup-carve/carve-py) - Python bindings (PyO3) over the carve-rs engine; `carve.to_html` plus Markdown, plain-text, and ANSI renderers and the extension toggles, output byte-identical to the carve-rs CLI. Installs as a native wheel via maturin.
+- [carve-py](https://github.com/markup-carve/carve-py) - Python bindings (PyO3) over carve-rs, with HTML, Markdown, plain-text and ANSI renderers. Output byte-identical to the carve-rs CLI.
 
 ### Go
 
@@ -83,12 +83,12 @@ Language-specific implementations for parsing and rendering Carve.
 Standalone editors and editing support for popular editors and IDEs.
 
 - [Carver](https://github.com/josbeir/carver) - Native GNOME note-taking app with rich-text editing, synchronized Carve source and preview, and full-text search.
-- [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode (`carve-mode`) for `.crv` files: font-lock highlighting for the full syntax, `%%` comments, imenu heading index, and outline support.
+- [emacs-carve](https://github.com/markup-carve/emacs-carve) - Emacs major mode for `.crv` files, with highlighting, an imenu heading index and outline support.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
-- [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin (IntelliJ IDEA, PhpStorm, WebStorm, ...) for `.crv` files: TextMate-based highlighting, live split preview (carve-js or carve-php), HTML export, live templates, and custom preview CSS.
+- [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin for `.crv` files, with highlighting, a live split preview and HTML export.
 - [obsidian-carve](https://github.com/markup-carve/obsidian-carve) - Obsidian community plugin registering `.crv` notes with safe reading and editable source views; raw HTML is disabled by default.
-- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: `.sublime-syntax` highlighting with real embedded language syntaxes inside fenced code, a heading outline for Goto Symbol, cross-reference navigation, `carve fmt` integration, a build system wrapping `carve lint`, and snippets.
-- [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: classic regex syntax highlighting that works with any colorscheme, plus Neovim Tree-sitter integration reusing the native grammar and queries.
+- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: highlighting with embedded languages in fences, a heading outline, and `carve fmt` and `carve lint` integration.
+- [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: regex highlighting for any colorscheme, plus Neovim Tree-sitter integration.
 - [vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` files, backed by the native Tree-sitter grammar.
 
@@ -103,27 +103,27 @@ Command-line utilities for working with Carve documents.
 
 ### Validators & Linters
 
-- [`carve lint`](https://github.com/markup-carve/carve-js#cli) - Validator in the carve-js CLI. Flags problems that parse but render wrong: broken `</#id>` cross-references, duplicate heading ids, trailing `{…}` heading attributes, legacy `raw FORMAT` fences, and block markers that leaked as plain text. Exits non-zero, so it works as a CI gate; the same checks surface live in editors via [carve-lsp](https://github.com/markup-carve/carve-lsp).
+- [`carve lint`](https://github.com/markup-carve/carve-js#cli) - Validator in the carve-js CLI for problems that parse but render wrong, such as broken cross-references and duplicate heading ids. Works as a CI gate and in editors via carve-lsp.
 
 ### Formatters
 
-- [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical Carve formatter, in the `carve` CLI of all three engines ([carve-js](https://github.com/markup-carve/carve-js), [carve-php](https://github.com/markup-carve/carve-php), [carve-rs](https://github.com/markup-carve/carve-rs)) with byte-identical output. Conservative, idempotent, and semantic-preserving (the rendered HTML is unchanged): normalizes whitespace, headings, fence lengths, and attribute spacing. List markers are deliberately preserved, not normalized - the bullet character and ordered delimiter are semantic in Carve (a different marker starts a new list), so rewriting them would merge adjacent lists. `carve fmt -w` rewrites in place; `carve fmt --check` is a CI gate. The serializer is also exposed programmatically (`carveToCarve` / `to_carve`).
+- [`carve fmt`](https://github.com/markup-carve/carve-js#cli) - Canonical formatter in the `carve` CLI of all three engines, with byte-identical output. Leaves the rendered HTML unchanged; `--check` works as a CI gate.
 
 ### Styling
 
-- [carve-css](https://github.com/markup-carve/carve-css) - The stylesheet for Carve's rendered HTML: admonitions, tab sets, code groups, code callouts, figures, footnotes, glossary, index, critic markup and the rest. Scoped under `.carve` and themed by overriding custom properties rather than selectors, in four layers (tokens, core, extensions, print). It exists because six repositories were each writing this CSS by hand and each covering a different subset - callouts, the glossary and the index were styled in exactly one of them. A coverage gate renders a fixture through the published engine and fails when a class or ARIA role reaching the page has no rule.
+- [carve-css](https://github.com/markup-carve/carve-css) - Stylesheet for Carve's rendered HTML, from admonitions and tab sets to footnotes and the glossary. Scoped under `.carve`, themed through custom properties.
 
 ### Benchmarks
 
-- [carve-bench](https://github.com/markup-carve/carve-bench) - Cross-engine render performance benchmarks: per-engine in-process timing harnesses (carve-js, carve-php, carve-rs) over a fixed document set, with an orchestrator that writes a results table. A speed comparison; correctness is covered by the shared conformance corpus.
-- [pandoc-format-fidelity](https://github.com/markup-carve/pandoc-format-fidelity) - How much of a document survives a conversion, across every format pandoc ships. Each probe is a pair of pandoc ASTs differing in one feature, answering whether a writer can express it and whether it reads back unchanged. Carve is scored on the same probes via the pandoc-carve bridge. A compatibility comparison, where carve-bench is a speed one.
+- [carve-bench](https://github.com/markup-carve/carve-bench) - Render speed benchmarks across carve-js, carve-php and carve-rs over a fixed document set, written out as a results table.
+- [pandoc-format-fidelity](https://github.com/markup-carve/pandoc-format-fidelity) - How much of a document survives conversion, across every format pandoc ships, with Carve scored on the same probes via pandoc-carve.
 
 ## AI & Agent Tooling
 
 Skills and servers for AI coding tools and LLM agents writing Carve.
 
-- [carve-mcp](https://github.com/markup-carve/carve-mcp) - A local Model Context Protocol server backed by carve-js. It gives agents tools for linting, formatting, rendering, AST inspection and HTML/Markdown/Djot import, plus concise authoring resources. It needs no filesystem or network access. Not yet published - run it from source.
-- [carve-skill](https://github.com/markup-carve/carve-skill) - A Claude Code / agent authoring skill (`carve-authoring`) that teaches AI tools to write valid `.crv`. Front-loads the syntax that diverges from Markdown/Djot (swapped emphasis delimiters, braced-only sup/sub) and the traps that silently mis-render, plus the `carve lint` round-trip loop. Content is sourced from the canonical spec docs via a git submodule and drift-guarded in CI, so it can't rot out of sync with the language.
+- [carve-mcp](https://github.com/markup-carve/carve-mcp) - Local MCP server backed by carve-js, with tools for linting, formatting, rendering and import. Needs no filesystem or network access; not yet published.
+- [carve-skill](https://github.com/markup-carve/carve-skill) - Agent skill (`carve-authoring`) that teaches AI tools to write valid `.crv`, focusing on where Carve differs from Markdown. Sourced from the spec docs.
 
 ## Converters
 
@@ -146,10 +146,10 @@ Render Carve to other output formats. All three engines (carve-js, carve-php, ca
 
 Tools for migrating from other markup formats to Carve.
 
-- [carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter (handles the inline syntax that differs from Markdown, blank-line block spacing, setext headings, and more).
+- [carve-js `markdownToCarve`](https://github.com/markup-carve/carve-js) - Source-to-source Markdown → Carve converter that handles the syntax where Carve differs from Markdown.
 - [carve-php converters](https://github.com/markup-carve/carve-php/tree/main/src/Converter) - Markdown, HTML, BBCode and Djot → Carve converters, with a `carve` CLI for converting files.
-- [pandoc-carve import](https://github.com/markup-carve/pandoc-carve) - anything pandoc reads (DOCX, LaTeX, RST, Org, MediaWiki, ...) → Carve, via the Pandoc AST and the `carve fmt` serializer (`pandoc-carve doc.docx -f docx -o doc.crv`).
-- [pdf-to-carve](https://github.com/markup-carve/pdf-to-carve) - PDFs and document images → Carve. Born-digital PDFs are converted without any AI; scans and images can use an optional OpenAI-compatible vision path. Extraction never produces Carve syntax directly: it emits a strict, versioned JSON document that a deterministic writer serializes, then verifies with `carve fmt`/`carve lint`. Supports text, vision and hybrid (image plus positioned text) modes, JSON replay without a second API call, and an HTML review report.
+- [pandoc-carve import](https://github.com/markup-carve/pandoc-carve) - Anything pandoc reads (DOCX, LaTeX, RST, Org, ...) → Carve, via the Pandoc AST and the `carve fmt` serializer.
+- [pdf-to-carve](https://github.com/markup-carve/pdf-to-carve) - PDFs and document images → Carve. Born-digital PDFs convert without AI; scans can use an optional OpenAI-compatible vision path.
 
 ## Roundtrip Conversion
 
@@ -161,20 +161,20 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
-- [cakephp-markup](https://github.com/dereuromark/cakephp-markup) - CakePHP plugin rendering Carve to HTML via carve-php: a `CarveHelper` for converting Carve in templates, a `CarveView` for rendering `.crv` template files with variable substitution, and safe-mode and profile configuration.
-- [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php: `@carve` / `@carveRaw` / `@carveText` Blade directives, a `Carve` facade with named converter profiles (including the static graceful-degradation mode), a `ValidCarve` validation rule, and content-hash render caching.
-- [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle that renders Carve to HTML via carve-php: a `{{ value|carve }}` Twig filter, a `carve()` function, a `CarveRenderer` service, and configurable safe-mode sanitization.
+- [cakephp-markup](https://github.com/dereuromark/cakephp-markup) - CakePHP plugin rendering Carve to HTML via carve-php: a `CarveHelper` for templates and a `CarveView` for `.crv` template files.
+- [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php, with Blade directives, a facade, a validation rule and render caching.
+- [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle rendering Carve to HTML via carve-php: a Twig filter and function, a renderer service, and safe-mode sanitization.
 - [tempest-carve](https://github.com/markup-carve/tempest-carve) - Tempest package rendering Carve to safe HTML via carve-php: an `x-carve` view component and an injectable `CarveRenderer` service.
 - [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` files as rendered HTML modules.
 - [webpack-loader-carve](https://github.com/markup-carve/webpack-loader-carve) - Webpack 5 loader for importing `.crv` files as build-time-rendered HTML modules, with a verified Next.js webpack build.
-- [carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for building WYSIWYG editors that read and write Carve (also ships Prism and highlight.js grammars; see Syntax Highlighting).
-- [carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components (and a `useCarveHtml` hook/composable) that render Carve to HTML via carve-js, with per-framework subpath exports, SSR support, and safe-by-default raw-HTML escaping.
+- [carve-grammars](https://github.com/markup-carve/carve-grammars) - Tiptap editor kit and Carve serializer for WYSIWYG editors that read and write Carve. Also ships Prism and highlight.js grammars.
+- [carve-components](https://github.com/markup-carve/carve-components) - React and Vue 3 `<Carve>` components that render Carve to HTML via carve-js, with SSR support and safe-by-default raw-HTML escaping.
 
 ## CMS Integration
 
 Carve plugins for content management systems.
 
-- [shopware-carve](https://github.com/markup-carve/shopware-carve) - Shopware 6 plugin (carve-php engine) with Twig filters, a CMS element, product/category fields, admin live preview, mail rendering, and a CLI.
+- [shopware-carve](https://github.com/markup-carve/shopware-carve) - Shopware 6 plugin (carve-php engine) with Twig filters, a CMS element, admin live preview and mail rendering.
 - [wp-carve](https://github.com/markup-carve/wp-carve) - WordPress plugin (carve-php engine) with live in-browser preview, multi-format paste, frontmatter-to-meta, render caching, and a REST API.
 
 ## Documentation Tools
@@ -182,24 +182,24 @@ Carve plugins for content management systems.
 Generate documentation from Carve source files.
 
 - [mkdocs-carve](https://github.com/markup-carve/mkdocs-carve) - MkDocs plugin that renders `.crv` pages via carve-py, with per-extension config and full nav/path support.
-- [docusaurus-carve](https://github.com/markup-carve/docusaurus-carve) - Docusaurus 3 docs plugin for `.crv` pages, delegating routes, sidebars, frontmatter, search metadata, and theming to the official docs plugin.
-- [zensical-carve](https://github.com/markup-carve/zensical-carve) - Zensical support (the successor to MkDocs, from the Material for MkDocs team): a `carve` custom fence for blocks inside Markdown pages, plus a preprocessor that renders whole `.crv` pages, lifting Carve frontmatter into the page.
+- [docusaurus-carve](https://github.com/markup-carve/docusaurus-carve) - Docusaurus 3 docs plugin for `.crv` pages, delegating routes, sidebars and theming to the official docs plugin.
+- [zensical-carve](https://github.com/markup-carve/zensical-carve) - Zensical support (the MkDocs successor): a `carve` fence inside Markdown pages, plus a preprocessor that renders whole `.crv` pages.
 
 ## Static Site Generators
 
 Build static websites with Carve content.
 
 - [astro-carve](https://github.com/markup-carve/astro-carve) - Astro integration: import `.crv` files into Astro pages and components as rendered HTML with frontmatter.
-- [carve-press](https://github.com/markup-carve/carve-press) - First-party static site generator: discovers `.crv` pages, expands includes, renders through carve-js with a Shiki highlighting stack, validates links and cross-references at build time, and ships a dev server with incremental rebuilds. Its own documentation site is built with it.
+- [carve-press](https://github.com/markup-carve/carve-press) - First-party static site generator for `.crv` pages: carve-js with Shiki highlighting, link checks at build time, and a dev server.
 - [eleventy-carve](https://github.com/markup-carve/eleventy-carve) - Eleventy (11ty) plugin adding `.crv` as a template format, with Carve frontmatter flowing into the data cascade.
-- [hugo-carve](https://github.com/markup-carve/hugo-carve) - Hugo preprocessor (via carve-go) that converts `.crv` content to HTML pages, preserving front matter. (Hugo has no markup-plugin API, so it is a convert-then-build step.)
+- [hugo-carve](https://github.com/markup-carve/hugo-carve) - Hugo preprocessor (via carve-go) that converts `.crv` content to HTML pages before the build, keeping front matter.
 - [jekyll-carve](https://github.com/markup-carve/jekyll-carve) - Jekyll converter plugin rendering `.crv` pages via the carve-lang Ruby gem.
 
 ## Presentations
 
 Slide decks written in Carve.
 
-- [reveal-carve](https://github.com/markup-carve/reveal-carve) - reveal.js integration: a runtime plugin that renders `.crv` files as the deck loads, plus a Node build step and CLI with chapter directories, include expansion, slide directives for classes, notes and fragments, deck linting, a Markdown handout export and PDF printing. [Demo deck](https://markup-carve.github.io/reveal-carve/).
+- [reveal-carve](https://github.com/markup-carve/reveal-carve) - reveal.js integration: a runtime plugin plus a build step and CLI, with slide directives, deck linting and PDF printing. [Demo deck](https://markup-carve.github.io/reveal-carve/).
 
 ## Syntax Highlighting
 
@@ -207,10 +207,10 @@ Grammars and themes for displaying Carve with syntax colors.
 
 - [tree-sitter-carve](https://github.com/markup-carve/tree-sitter-carve) - Tree-sitter grammar with queries for highlighting, injections, folds, indents, locals, and text objects.
 - [carve-grammars `prism/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/prism/carve.js) - Prism grammar for highlighting Carve source on the web (`Prism.languages.carve`).
-- [highlightjs-carve](https://github.com/markup-carve/highlightjs-carve) - highlight.js language definition as its own npm package, which is the only route highlight.js leaves open: it no longer merges new language grammars into the core library. UMD and dependency-free, so a plain `<script>` registers it against a global `hljs` as readily as a bundler does.
-- [pygments-carve](https://github.com/markup-carve/pygments-carve) - Pygments lexer, found through the `pygments.lexers` entry point, so installing it is the whole integration: `carve` and `crv` become working fence words anywhere Pygments is the highlighter, MkDocs, Sphinx, Zensical and `pygmentize` included.
+- [highlightjs-carve](https://github.com/markup-carve/highlightjs-carve) - highlight.js language definition as a standalone npm package. UMD and dependency-free, so a plain `<script>` works as well as a bundler.
+- [pygments-carve](https://github.com/markup-carve/pygments-carve) - Pygments lexer; installing it is the whole integration, so `carve` fences highlight in MkDocs, Sphinx, Zensical and `pygmentize`.
 - [rouge-carve](https://github.com/markup-carve/rouge-carve) - Rouge lexer, coloring Carve source wherever Rouge is the highlighter, such as a fenced `carve` block in a Jekyll post.
-- [carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - the same grammar as a file inside carve-grammars, beside the Prism and Shiki ones, for a consumer already depending on that package.
+- [carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - The same grammar as a file inside carve-grammars, for consumers already using that package.
 - [vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
 
 ## Sandboxes
@@ -219,17 +219,17 @@ Interactive playgrounds for experimenting with Carve.
 
 - [Carve Playground](https://markup-carve.github.io/carve/playground) - Type Carve and see the rendered HTML live in the browser.
 - [carve-php sandbox](https://sandbox.dereuromark.de/sandbox/carve) - carve-php playground with converters, an AST inspector and extension demos.
-- [carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve built on the carve-grammars Tiptap kit: visual editing, a live Carve source pane, and an HTML preview, with round-trip import via carve-js.
+- [carve-wysiwyg](https://github.com/markup-carve/carve-wysiwyg) - WYSIWYG editor for Carve on the carve-grammars Tiptap kit, with a live source pane and an HTML preview.
 
 ## Example Sites
 
 Websites, blogs, and runnable apps built with Carve.
 
 - [Carve documentation site](https://markup-carve.github.io/carve/) - The official docs, built from Carve sources via vite-plugin-carve.
-- [Zensical Carve demo](https://github.com/markup-carve/zensical-carve-demo) - a Zensical site whose pages are written in Carve with every extension enabled, including the CSS that styles the constructs Material does not know about.
-- [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, authored in Carve and built by carve-press itself: home layout, generated blog and tag pages, client-side search, live `::: compare` and playground blocks, and a German locale sample.
-- [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve: Blade directives, facade and named profiles, form validation, a safe-mode comparison, and the static graceful-degradation mode rendered side by side with the interactive output.
-- [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of the symfony-carve bundle: Twig filter and function, the service, a live editor, a safe-mode comparison, and a syntax gallery.
+- [Zensical Carve demo](https://github.com/markup-carve/zensical-carve-demo) - A Zensical site written in Carve with every extension enabled, including CSS for constructs Material does not style.
+- [CarvePress documentation site](https://markup-carve.github.io/carve-press/) - The carve-press docs, written in Carve and built by carve-press itself, with blog pages, search and live playground blocks.
+- [laravel-carve-demo](https://github.com/markup-carve/laravel-carve-demo) - Runnable Laravel app demonstrating every feature of laravel-carve, including a safe-mode comparison and the static mode side by side.
+- [symfony-carve-demo](https://github.com/markup-carve/symfony-carve-demo) - Runnable Symfony app demonstrating every feature of symfony-carve, including a live editor and a safe-mode comparison.
 - [tempest-carve-demo](https://github.com/markup-carve/tempest-carve-demo) - Runnable Tempest app demonstrating every feature of tempest-carve.
 
 ## Learning Resources
