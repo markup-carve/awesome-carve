@@ -2,7 +2,7 @@
 
 > A curated list of Carve resources, tools, editors, and libraries.
 
-[Carve](https://github.com/markup-carve/carve) is a lightweight markup language for documents. It keeps Markdown's familiarity and [Djot](https://djot.net/)'s technical rigor - linear parsing, no expressive blind spots, arbitrary attributes - and adds inline delimiters that look like their output (`/italic/`, `*bold*`, `_underline_`, `~strike~`) plus first-class figures, footnotes, cross-references, citations, admonitions and math.
+[Carve](https://github.com/markup-carve/carve) is a lightweight markup language for documents and the web. It keeps Markdown's familiarity and [Djot](https://djot.net/)'s technical rigor - linear parsing, no expressive blind spots, arbitrary attributes - and adds inline delimiters that look like their output (`/italic/`, `*bold*`, `_underline_`, `~strike~`) plus first-class figures, footnotes, cross-references, citations, admonitions and math.
 
 ## Contents
 
