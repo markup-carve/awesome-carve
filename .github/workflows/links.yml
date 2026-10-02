@@ -14,8 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.sha }}
+          restore-keys: lychee-
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
+          # The checker settings live in lychee.toml, which the action's
+          # shell-eval of these args would otherwise mangle.
           args: --verbose --no-progress README.md
