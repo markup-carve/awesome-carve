@@ -24,14 +24,16 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          # Almost every link in the README points at github.com. At lychee's
-          # default concurrency that is one burst of ~100 requests from a
-          # runner IP, which github.com answers with 503 for a part of them.
-          # A token does not help: lychee only sends it to the API, and the API
-          # fallback rejects a /blob/ path outright.
+          # --remap: github.com's rendered blob view answers 503 for files it
+          # will not render, so all eight /blob/ links in the README failed
+          # while the files were there. raw.githubusercontent.com serves the
+          # same file and still answers 404 when a path is wrong, so the check
+          # keeps its teeth. The remaining settings bound the request burst:
+          # nearly every README link is a github.com URL.
           args: >-
             --verbose --no-progress
             --cache --max-cache-age 1d
             --max-concurrency 8
             --max-retries 5 --retry-wait-time 3
+            --remap "https://github.com/([^/]+)/([^/]+)/blob/(.*) https://raw.githubusercontent.com/$1/$2/$3"
             README.md
