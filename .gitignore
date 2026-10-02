@@ -1,1 +1,4 @@
 .idea/
+
+# lychee on-disk request cache
+.lycheecache

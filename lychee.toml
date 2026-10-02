@@ -1,0 +1,20 @@
+# Nearly every link in the README points at github.com.
+#
+# github.com's rendered blob view answers 503 for files it declines to render,
+# so all eight /blob/ links failed the check while every file was in place.
+# raw.githubusercontent.com serves the same file and still answers 404 for a
+# wrong path, so remapping keeps the check able to fail.
+remap = [
+  "https://github.com/([^/]+)/([^/]+)/blob/(.*) https://raw.githubusercontent.com/$1/$2/$3",
+]
+
+# Bound the request burst against a single host.
+max_concurrency = 8
+max_retries = 5
+retry_wait_time = 3
+
+# Reuse verdicts across runs, but never cache a throttle or a server error -
+# those have to be re-asked next run.
+cache = true
+max_cache_age = "1d"
+cache_exclude_status = "429, 500..=599"
