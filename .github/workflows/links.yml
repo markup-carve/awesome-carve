@@ -14,8 +14,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: lychee-${{ github.sha }}
+          restore-keys: lychee-
       - name: Check links
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          args: --verbose --no-progress README.md
+          # Almost every link in the README points at github.com. At lychee's
+          # default concurrency that is one burst of ~100 requests from a
+          # runner IP, which github.com answers with 503 for a part of them.
+          # A token does not help: lychee only sends it to the API, and the API
+          # fallback rejects a /blob/ path outright.
+          args: >-
+            --verbose --no-progress
+            --cache --max-cache-age 1d
+            --max-concurrency 8
+            --max-retries 5 --retry-wait-time 3
+            README.md
