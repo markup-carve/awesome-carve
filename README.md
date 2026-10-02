@@ -88,6 +88,7 @@ Standalone editors and editing support for popular editors and IDEs.
 - [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin for `.crv` files, with highlighting, a live split preview and HTML export.
 - [obsidian-carve](https://github.com/markup-carve/obsidian-carve) - Obsidian community plugin registering `.crv` notes with safe reading and editable source views; raw HTML is disabled by default.
 - [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: highlighting with embedded languages in fences, a heading outline, and `carve fmt` and `carve lint` integration.
+- [sublime-carve-lsp](https://github.com/markup-carve/sublime-carve-lsp) - Sublime Text LSP client wiring carve-lsp into the editor, adding diagnostics, completion, hover and rename on top of the syntax package.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: regex highlighting for any colorscheme, plus Neovim Tree-sitter integration.
 - [vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` files, backed by the native Tree-sitter grammar.
@@ -116,6 +117,7 @@ Command-line utilities for working with Carve documents.
 ### Benchmarks
 
 - [carve-bench](https://github.com/markup-carve/carve-bench) - Render speed benchmarks across carve-js, carve-php and carve-rs over a fixed document set, written out as a results table.
+- [carve-compat](https://github.com/markup-carve/carve-compat) - Cross-format AST adapters and measured reports against nine external parsers, among them cmark, djot.js, Docutils, Asciidoctor.js and Pandoc, with diagnostics and pinned revisions per run.
 - [pandoc-format-fidelity](https://github.com/markup-carve/pandoc-format-fidelity) - How much of a document survives conversion, across every format pandoc ships, with Carve scored on the same probes via pandoc-carve.
 
 ## AI & Agent Tooling
@@ -210,6 +212,7 @@ Grammars and themes for displaying Carve with syntax colors.
 - [highlightjs-carve](https://github.com/markup-carve/highlightjs-carve) - highlight.js language definition as a standalone npm package. UMD and dependency-free, so a plain `<script>` works as well as a bundler.
 - [pygments-carve](https://github.com/markup-carve/pygments-carve) - Pygments lexer; installing it is the whole integration, so `carve` fences highlight in MkDocs, Sphinx, Zensical and `pygmentize`.
 - [rouge-carve](https://github.com/markup-carve/rouge-carve) - Rouge lexer, coloring Carve source wherever Rouge is the highlighter, such as a fenced `carve` block in a Jekyll post.
+- [tempest-highlight-carve](https://github.com/markup-carve/tempest-highlight-carve) - Carve support for `tempest/highlight`, highlighting `.crv` source server-side in a PHP application.
 - [carve-grammars `highlightjs/carve.js`](https://github.com/markup-carve/carve-grammars/blob/main/highlightjs/carve.js) - The same grammar as a file inside carve-grammars, for consumers already using that package.
 - [vscode-carve `carve.tmLanguage.json`](https://github.com/markup-carve/vscode-carve/blob/main/syntaxes/carve.tmLanguage.json) - TextMate grammar (also bundled by intellij-carve).
 
