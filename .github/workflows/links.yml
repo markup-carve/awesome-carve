@@ -24,16 +24,6 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          # --remap: github.com's rendered blob view answers 503 for files it
-          # will not render, so all eight /blob/ links in the README failed
-          # while the files were there. raw.githubusercontent.com serves the
-          # same file and still answers 404 when a path is wrong, so the check
-          # keeps its teeth. The remaining settings bound the request burst:
-          # nearly every README link is a github.com URL.
-          args: >-
-            --verbose --no-progress
-            --cache --max-cache-age 1d
-            --max-concurrency 8
-            --max-retries 5 --retry-wait-time 3
-            --remap "https://github.com/([^/]+)/([^/]+)/blob/(.*) https://raw.githubusercontent.com/$1/$2/$3"
-            README.md
+          # The checker settings live in lychee.toml, which the action's
+          # shell-eval of these args would otherwise mangle.
+          args: --verbose --no-progress README.md
