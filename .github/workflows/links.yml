@@ -9,9 +9,12 @@ on:
     - cron: '0 0 * * 0'  # Weekly on Sunday
   workflow_dispatch:
 
+# Every job below carries a timeout-minutes bound, so a hung step fails in
+# minutes instead of running to GitHub's 360-minute default.
 jobs:
   check-links:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Restore lychee cache
