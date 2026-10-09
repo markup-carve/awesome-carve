@@ -42,7 +42,7 @@ Formal syntax specification and grammar definitions.
 - [carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
 - [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
 - [Conformance test suite](https://github.com/markup-carve/carve/tree/main/tests/corpus) - Shared spec corpus: `.crv` input paired with expected `.html`, used by every implementation as a git submodule. Also in djot.js format at [`tests/spec`](https://github.com/markup-carve/carve/tree/main/tests/spec).
-- [carve-conformance](https://github.com/markup-carve/carve-conformance) - Proofs, reader agreement and cross-format compatibility checks, with a [website](https://markup-carve.github.io/carve-conformance/).
+- [carve-conformance](https://github.com/markup-carve/carve-conformance) - Machine-checked Rocq models of Carve parsing rules, plus cross-format AST compatibility reports against nine external parsers.
 
 ## Parsers & Libraries
 
