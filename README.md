@@ -42,7 +42,7 @@ Formal syntax specification and grammar definitions.
 - [carve `grammar.ebnf`](https://github.com/markup-carve/carve/blob/main/resources/grammar.ebnf) - Normative EBNF grammar plus the PART 9 semantic constraints (the conformance authority).
 - [Carve docs](https://markup-carve.github.io/carve/) - Rendered spec, examples, and edge-case reference.
 - [Conformance test suite](https://github.com/markup-carve/carve/tree/main/tests/corpus) - Shared spec corpus: `.crv` input paired with expected `.html`, used by every implementation as a git submodule. Also in djot.js format at [`tests/spec`](https://github.com/markup-carve/carve/tree/main/tests/spec).
-- [carve-conformance](https://github.com/markup-carve/carve-conformance) - Machine-checked Rocq models of Carve parsing rules and agreement of the reference readers ([website](https://markup-carve.github.io/carve-conformance/proofs/)).
+- [carve-conformance](https://github.com/markup-carve/carve-conformance) - Evidence that the readers agree: machine-checked Rocq models of the parsing rules, the spec and all three engines compared case by case, and AST round trips through nine external parsers, among them cmark, djot.js, Docutils, Asciidoctor.js and Pandoc. Published as a [website](https://markup-carve.github.io/carve-conformance/) with pinned revisions per run.
 
 ## Parsers & Libraries
 
@@ -116,7 +116,6 @@ Command-line utilities for working with Carve documents.
 ### Benchmarks
 
 - [carve-bench](https://github.com/markup-carve/carve-bench) - Render speed benchmarks across carve-js, carve-php and carve-rs over a fixed document set, written out as a results table.
-- [carve-conformance: compatibility](https://github.com/markup-carve/carve-conformance/tree/main/compat) - Cross-format AST adapters and measured reports against nine external parsers, among them cmark, djot.js, Docutils, Asciidoctor.js and Pandoc, with diagnostics and pinned revisions per run.
 - [pandoc-format-fidelity](https://github.com/markup-carve/pandoc-format-fidelity) - How much of a document survives conversion, across every format pandoc ships, with Carve scored on the same probes via pandoc-carve.
 
 ## AI & Agent Tooling
