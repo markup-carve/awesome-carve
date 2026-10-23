@@ -7,7 +7,7 @@
 
 ## Checklist
 
-- [ ] I have read the [contributing guidelines](../CONTRIBUTING.md).
+- [ ] I have read the [contributing guidelines](CONTRIBUTING.md).
 - [ ] This is not a duplicate of an existing item.
 - [ ] The item is related to Carve.
 - [ ] The link works and points to the correct resource.
