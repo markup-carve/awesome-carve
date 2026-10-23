@@ -162,6 +162,7 @@ Tools supporting lossless bidirectional conversion for content editing workflows
 
 Carve support for web frameworks.
 
+- [cakephp-carve](https://github.com/markup-carve/cakephp-carve) - CakePHP plugin rendering Carve to HTML via carve-php, with a view helper and `.crv` templates, a validation rule, an ORM behavior, console commands and render caching.
 - [cakephp-markup](https://github.com/dereuromark/cakephp-markup) - CakePHP plugin rendering Carve to HTML via carve-php: a `CarveHelper` for templates and a `CarveView` for `.crv` template files.
 - [filament-carve](https://github.com/jeffersongoncalves/filament-carve) - Filament plugin built on laravel-carve: a validated editor field with live preview, plus a rendered infolist entry and table column.
 - [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php, with Blade directives, a facade, a validation rule and render caching.
