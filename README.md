@@ -245,6 +245,7 @@ Articles and tutorials for learning Carve.
 - 2026-07: [Why Carve markup changes how you author rich text in Shopware 6](https://www.dereuromark.de/2026/07/17/why-carve-markup-changes-how-you-author-rich-text-in-shopware-6/) - Authoring rich text in Shopware 6 without pasting raw HTML.
 - 2026-08: [Pandoc: What survives a conversion?](https://www.dereuromark.de/2026/08/19/pandoc-what-survives-a-conversion/) - Measures round-trip fidelity across the formats Pandoc writes, Carve among them.
 - 2026-09: [From Markdown to Carve](https://www.dereuromark.de/2026/09/24/from-markdown-to-carve/) - Convert a Markdown file, review syntax changes, and lint the Carve output.
+- 2026-10: [Docs that grow up: what Carve does after the first draft](https://www.dereuromark.de/2026/10/23/docs-that-grow-up-what-carve-does-after-the-first-draft/) - Long how-to guides: code inside numbered steps, highlighted diffs, code callouts and shared sections.
 
 ### Tutorials
 
