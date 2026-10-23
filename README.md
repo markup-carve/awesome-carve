@@ -165,7 +165,7 @@ Carve support for web frameworks.
 - [cakephp-carve](https://github.com/markup-carve/cakephp-carve) - CakePHP plugin rendering Carve to HTML via carve-php, with a view helper and `.crv` templates, a validation rule, an ORM behavior, console commands and render caching.
 - [filament-carve](https://github.com/jeffersongoncalves/filament-carve) - Filament plugin built on laravel-carve: a validated editor field with live preview, plus a rendered infolist entry and table column.
 - [laravel-carve](https://github.com/markup-carve/laravel-carve) - Laravel package rendering Carve to HTML via carve-php, with Blade directives, a facade, a validation rule and render caching.
-- [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle rendering Carve to HTML via carve-php: a Twig filter and function, a renderer service, and safe-mode sanitization.
+- [symfony-carve](https://github.com/markup-carve/symfony-carve) - Symfony bundle rendering Carve to HTML via carve-php, with Twig filters and functions, `carve:render`, `carve:lint`, `carve:fmt` and `carve:convert` commands, a `ValidCarve` constraint, cache-pool caching and safe mode.
 - [tempest-carve](https://github.com/markup-carve/tempest-carve) - Tempest package rendering Carve to safe HTML via carve-php: an `x-carve` view component and an injectable `CarveRenderer` service.
 - [vite-plugin-carve](https://github.com/markup-carve/vite-plugin-carve) - Vite plugin for importing `.crv` files as rendered HTML modules.
 - [webpack-loader-carve](https://github.com/markup-carve/webpack-loader-carve) - Webpack 5 loader for importing `.crv` files as build-time-rendered HTML modules, with a verified Next.js webpack build.
