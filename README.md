@@ -87,7 +87,7 @@ Standalone editors and editing support for popular editors and IDEs.
 - [helix-carve](https://github.com/markup-carve/helix-carve) - Helix editor support: `languages.toml` entry and runtime queries backed by the tree-sitter-carve grammar.
 - [intellij-carve](https://github.com/markup-carve/intellij-carve) - JetBrains IDE plugin for `.crv` files, with highlighting, a live split preview and HTML export.
 - [obsidian-carve](https://github.com/markup-carve/obsidian-carve) - Obsidian community plugin registering `.crv` notes with safe reading and editable source views; raw HTML is disabled by default.
-- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: highlighting with embedded languages in fences, a heading outline, and `carve fmt` and `carve lint` integration.
+- [sublime-carve](https://github.com/markup-carve/sublime-carve) - Sublime Text package for `.crv` files: highlighting with embedded languages in fences, a heading outline, and `carve fmt` and `carve lint` integration. Its companion [sublime-carve-lsp](https://github.com/markup-carve/sublime-carve-lsp) (LSP-carve) adds carve-lsp diagnostics, completion, rename and formatting.
 - [vim-carve](https://github.com/markup-carve/vim-carve) - Vim and Neovim support: regex highlighting for any colorscheme, plus Neovim Tree-sitter integration.
 - [vscode-carve](https://github.com/markup-carve/vscode-carve) - VS Code extension for `.crv` files, with syntax highlighting, semantic tokens, diagnostics, and document symbols.
 - [zed-carve](https://github.com/markup-carve/zed-carve) - Zed editor extension for `.crv` files, backed by the native Tree-sitter grammar.
